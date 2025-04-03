@@ -8,7 +8,6 @@
   <link rel="stylesheet" href="../styles/w2.css">
   <link rel="stylesheet" href="../styles/toppage.css">
   <script src="https://kit.fontawesome.com/ca7fa88fbb.js" crossorigin="anonymous"></script>
-  <iframe src="https://www.youtuberepeater.com/watch?v=kcs0gE9SXYc#gsc.tab=0" width="0" height="0" frameborder="0" allowfullscreen></iframe>
   <title>About</title>
 </head>
 <body>
@@ -26,9 +25,6 @@
             <li><a class="white" href="">COMMS</a></li>
         </ul>
     </nav>
-      <div id="hamburger">
-        <span></span>
-      </div>
     </header>
   </div>
 
@@ -62,7 +58,7 @@
     </div>
   </div>
   </div>
-
+    <!-- footer session -->
     <footer class="footertop1" id="footer">
       <div class="footertop2">
         <div class="white">Please do not reprint without permission.<br>
@@ -116,11 +112,42 @@
       });
     });
   </script>
+  <div id="player"></div>
+  <!-- website pizza theme with youtube iframe API-->
+  <script>
+    let tag = document.createElement('script');
+    tag.src = "https://www.youtube.com/iframe_api";
+    let firstScriptTag = document.getElementsByTagName('script')[0];
+    firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
 
+    let player;
+
+    function onYouTubeIframeAPIReady() {
+        player = new YT.Player('player', {
+            videoId: 'kcs0gE9SXYc',
+            playerVars: {
+                autoplay: 1,
+                loop: 1,
+                playlist: 'kcs0gE9SXYc',
+                controls: 0,
+                modestbranding: 1,
+                showinfo: 0
+            },
+            events: {
+                onReady: function(event) {
+                  event.target.setVolume(5); // set volume 0 to 100
+                  event.target.playVideo();
+                }
+            }
+        });
+    }
+  </script>
+
+  <!-- website auto scroll icon -->
   <p id="page-top" style="position: fixed; bottom: 10px; right: 10px; cursor: pointer;">
     <a href="#top"><i class="fa-solid fa-chevron-up" aria-hidden="true"></i> ⇪</a>
   </p>
-
+  <!-- website auto scroll code -->
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   <script>
     $(document).ready(function(){
