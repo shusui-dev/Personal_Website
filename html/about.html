@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link REL="SHORTCUT ICON" HREF="../img/favicon/favicon.ico">
+  <link rel="stylesheet" href="../styles/main.css">
+  <link rel="stylesheet" href="../styles/w2.css">
+  <link rel="stylesheet" href="../styles/toppage.css">
+  <script src="https://kit.fontawesome.com/ca7fa88fbb.js" crossorigin="anonymous"></script>
+	<script type="text/javascript" src="../src/hamburger.js"></script>
+	<script type="text/javascript" src="../src/smooth_scroll.js"></script>
+  <title>About</title>
+</head>
+<body>
+  <div class="headerBox">
+    <div class="logo">
+      <a href="../index.html"><img src="../img/DSP.png" alt="website logo title"></a>
+    </div>
+    <header>
+      <nav class="pc-nav">
+        <ul>
+            <li><a class="white" href="html/about.html">ABOUT</a></li>
+            <li><a class="white" href="">RECIPES</a></li>
+            <li><a class="white" href="">ART</a></li>
+            <li><a class="white" href="">CONTACT</a></li>
+            <li><a class="white" href="">COMMS</a></li>
+        </ul>
+    </nav>
+      <div id="hamburger">
+        <span></span>
+      </div>
+    </header>
+  </div>
+
+  <div id="container">
+    <div id="mainbox">
+      <h2 class="heading16">About me</h2>
+      <div class="profile">
+      <div class="profile2">
+      <div class="profileimg" ><img src="../img/icon-avatar.png"></div>
+      <div class="profiletext"><i class="fa-duotone fa-ghost"></i>秋水／Shusui</div>
+      <br>
+      Shusui is my internet nickname not actually my real one<br>
+      I've been working with illustration, coding, design, etc.
+      You can always contact me by email, discord etc to discuss your work.
+      I'll be looking forward to working with you.<br>
+      <br>
+      I like a lot music even the games that I play are based on rthymn<br>
+      I'm a cat person (─‿‿─) but I love all kind of animals<br>
+
+      <div class="mail">
+        <img src="../img/mailform.png" alt="img"> Mail<br>
+        <p><strong>kaalwy@proton.me</strong></p>
+       </div>
+       <br>
+       <div class="profileSNS">
+        <a href="https://x.com/Shusuiwy" target="_blank"><img class="socials" src="../img/icons/twitter.png" alt="twitter-logo"></a>
+        <a href="https://www.twitch.tv/shusuiwy" target="_blank"><img class="socials" src="../img/icons/twitch.png" alt=""></a>
+        <a href="https://www.youtube.com/@shusui_cat_lover" target="_blank"><img class="socials" src="../img/icons/youtube.png" alt=""></a>
+        <a href="https://github.com/shusui-dev" target="_blank"><img class="socials" src="../img/icons/github.png" alt="github-logo"></a>
+       </div>
+    </div>
+  </div>
+  </div>
+
+    <footer class="footertop1" id="footer">
+      <div class="footertop2">
+        <div class="white">Please do not reprint without permission.<br>
+          <p class="kaigyo3"><a href="../index.html" class="footer">Copyright &copy; 2025-<script type="text/javascript">myDate = new Date() ;myYear = myDate.getFullYear ();document.write(myYear);</script> 秋水 All Rights Reserved.</a></p>
+        </div>
+      </div>
+    </footer>
+
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
+  <script src="../src/magnific-popup.min.js"></script>
+  <script>
+    //? image
+    $(function(){
+      $('.popup-image').magnificPopup({
+        type: 'image'
+      });
+    });
+
+    //? gallery
+    $(function(){
+    $('.parent-container').magnificPopup({
+      delegate: 'a',
+        type: 'image',
+        gallery: {
+          enabled:true
+      }
+      });
+    });
+
+    //? inline
+    $(function () {
+      $('.popup-modal').magnificPopup({
+        type: 'inline',
+        preloader: false
+      });
+      $(document).on('click', '.popup-modal-dismiss', function (e) {
+        e.preventDefault();
+        $.magnificPopup.close();
+      });
+    });
+
+    //? iframe
+    $(function(){
+      $('.popup-iframe').magnificPopup({
+        disableOn: 1000,
+        type: 'iframe',
+        mainClass: 'mfp-fade',
+        removalDelay: 200,
+        preloader: false,
+        fixedContentPos: false
+      });
+    });
+  </script>
+
+  <p id="page-top" style="position: fixed; bottom: 10px; right: 10px; cursor: pointer;">
+    <a href="#top"><i class="fa-solid fa-chevron-up" aria-hidden="true"></i> ⇪</a>
+  </p>
+
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script>
+    $(document).ready(function(){
+      $('a[href^="#"]').on("click", function(event) {
+        event.preventDefault();
+
+        let target = $(this.getAttribute("href"));
+        if (target.length) {
+          $("html, body").animate({ scrollTop: target.offset().top }, 400, "swing");
+        } else {
+          $("html, body").animate({ scrollTop: 0 }, 400, "swing"); // Scroll to top if no target found
+        }
+      });
+    });
+  </script>
+</body>
+</html>
