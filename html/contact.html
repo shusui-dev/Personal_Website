@@ -8,65 +8,95 @@
   <link rel="stylesheet" href="../styles/w2.css">
   <link rel="stylesheet" href="../styles/toppage.css">
   <script src="https://kit.fontawesome.com/ca7fa88fbb.js" crossorigin="anonymous"></script>
-  <title>About</title>
+  <title>Document</title>
 </head>
 <body>
-  <div class="headerBox">
+  <div class="headeerBox">
     <div class="logo">
-      <a href="../index.html"><img src="../img/DSP.png" alt="website logo title"></a>
+      <a href="../index.html"><img src="../img/logo.png" alt="website logo title"></a>
     </div>
     <header>
       <nav class="pc-nav">
         <ul>
-            <li><a class="white" href="./about.html">(ABOUT)</a></li>
+            <li><a class="white" href="./about.html">ABOUT</a></li>
             <li><a class="white" href="">RECIPES</a></li>
             <li><a class="white" href="">ART</a></li>
-            <li><a class="white" href="./contact.html">CONTACT</a></li>
+            <li><a class="white" href="./contact.html">(CONTACT)</a></li>
             <li><a class="white" href="">COMMS</a></li>
         </ul>
     </nav>
     </header>
   </div>
-
-  <div id="container">
-    <div id="mainbox">
-      <h2 class="heading1">About me</h2>
-      <div class="profile">
-      <div class="profile2">
-      <div class="profileimg" ><img src="../img/icon-avatar.png"></div>
-      <div class="profiletext"><p>秋水／Shusui</p></div>
-      <br>
-      Shusui is my internet nickname not actually my real one<br>
-      I've been working with illustration, coding, design, etc.
-      You can always contact me by email, discord etc to discuss your work.
-      I'll be looking forward to working with you.<br>
-      <br>
-      I like a lot music even the games that I play are based on rthymn<br>
-      I'm a cat person (─‿‿─) but I love all kind of animals<br>
-
-      <div class="mail">
-        <img src="../img/mailform.png" alt="img"> Mail<br>
-        <p><strong>kaalwy@proton.me</strong></p>
+  <div id="mainbox">
+    <h2 class="heading2">Contact</h2>
+    <div class="BOX">
+      <h2>E-mail</h2>
+      <div class="outer">
+      <div class="inner">
+        <div class="mail">
+          <img src="../img/mailform.png" alt="img"> Mails<br>
+          <p><strong>kaalwy@proton.me / shusuiwy@gmail.com</strong></p>
+        </div>
       </div>
-      <br>
-      <div class="profileSNS">
-        <a href="https://x.com/Shusuiwy" target="_blank"><img class="socials" src="../img/icons/twitter.png" alt="twitter-logo"></a>
-        <a href="https://www.twitch.tv/shusuiwy" target="_blank"><img class="socials" src="../img/icons/twitch.png" alt=""></a>
-        <a href="https://www.youtube.com/@shusui_cat_lover" target="_blank"><img class="socials" src="../img/icons/youtube.png" alt=""></a>
-        <a href="https://github.com/shusui-dev" target="_blank"><img class="socials" src="../img/icons/github.png" alt="github-logo"></a>
+      <hr class="line_style">
+      <h2>Mail form</h2>
+      <form action="mail/postmail.cgi" method="post">
+      <div class="Form">
+        <div class="Form-Item">
+          <p class="Form-Item-Label"><span class="Form-Item-Label-Required"><i class="fa-sharp fa-solid fa-fish-fins"></i></span>Name*  　</p>
+          <input name="_Name" type="text" class="Form-Item-Input" name="_Name">
+        </div>
+        <div class="Form-Item">
+          <p class="Form-Item-Label"><span class="Form-Item-Label-Required"><i class="fa-sharp fa-solid fa-fish-fins"></i></span>E-mail*  　</p>
+          <input name="_Mail" type="email" class="Form-Item-Input" name="_E-mail">
+        </div>
+        <div class="Form-Item">
+          <p class="Form-Item-Label isMsg"><span class="Form-Item-Label-Required"><i class="fa-sharp fa-solid fa-fish-fins"></i></span>Message*</p>
+          <textarea class="Form-Item-Textarea" name="_Message"></textarea>
+        </div>
+        <input id="submit_button" type="submit" class="Form-Btn" value="Send">
       </div>
-    </div>
-  </div>
+      </form>
   </div>
     <!-- footer session -->
     <footer class="footertop1" id="footer">
       <div class="footertop2">
         <div class="white">Please do not reprint without permission.<br>
+          <!-- the date code compares the date of launch of the website with the current date -->
           <p><a href="../index.html" class="footer">Copyright &copy; 2025-<script type="text/javascript">myDate = new Date() ;myYear = myDate.getFullYear ();document.write(myYear);</script> 秋水 All Rights Reserved.</a></p>
         </div>
       </div>
     </footer>
+  <!-- waiting theme with youtube iframe API-->
+  <div id="player"></div>
+  <script>
+    let tag = document.createElement('script');
+    tag.src = "https://www.youtube.com/iframe_api";
+    let firstScriptTag = document.getElementsByTagName('script')[0];
+    firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
 
+    let player;
+
+    function onYouTubeIframeAPIReady() {
+        player = new YT.Player('player', {
+            videoId: 'leEQ3nz8O-I',
+            playerVars: {
+                autoplay: 1,
+                loop: 1,
+                playlist: 'leEQ3nz8O-I',
+                controls: 0,
+                modestbranding: 1,
+                showinfo: 0
+            },
+            events: {
+                onReady: function(event) {
+                  event.target.setVolume(1); // set volume 0 to 100
+                  event.target.playVideo();
+                }
+            }
+        });
+    }
+  </script>
   <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
   <script src="../src/magnific-popup.min.js"></script>
   <script>
@@ -112,40 +142,9 @@
       });
     });
   </script>
-  <div id="player"></div>
-  <!-- website pizza theme with youtube iframe API-->
-  <script>
-    let tag = document.createElement('script');
-    tag.src = "https://www.youtube.com/iframe_api";
-    let firstScriptTag = document.getElementsByTagName('script')[0];
-    firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
-
-    let player;
-
-    function onYouTubeIframeAPIReady() {
-        player = new YT.Player('player', {
-            videoId: 'kcs0gE9SXYc',
-            playerVars: {
-                autoplay: 1,
-                loop: 1,
-                playlist: 'kcs0gE9SXYc',
-                controls: 0,
-                modestbranding: 1,
-                showinfo: 0
-            },
-            events: {
-                onReady: function(event) {
-                  event.target.setVolume(2); // set volume 0 to 100
-                  event.target.playVideo();
-                }
-            }
-        });
-    }
-  </script>
-
   <!-- website auto scroll icon -->
   <p id="page-top" style="position: fixed; bottom: 10px; right: 10px; cursor: pointer;">
-    <a href="#top">⇪</a>
+    <a href="#top"><i class="fa-solid fa-chevron-up" aria-hidden="true"></i> ⇪</a>
   </p>
   <!-- website auto scroll code -->
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
