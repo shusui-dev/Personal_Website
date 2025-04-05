@@ -11,7 +11,7 @@
   <title>About</title>
 </head>
 <body>
-  <div class="headerBox">
+  <div class="headerBox2">
     <div class="logo">
       <a href="../index.html"><img src="../img/DSP.png" alt="website logo title"></a>
     </div>
@@ -147,21 +147,8 @@
   <p id="page-top" style="position: fixed; bottom: 10px; right: 10px; cursor: pointer;">
     <a href="#top">⇪</a>
   </p>
-  <!-- website auto scroll code -->
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-  <script>
-    $(document).ready(function(){
-      $('a[href^="#"]').on("click", function(event) {
-        event.preventDefault();
-
-        let target = $(this.getAttribute("href"));
-        if (target.length) {
-          $("html, body").animate({ scrollTop: target.offset().top }, 400, "swing");
-        } else {
-          $("html, body").animate({ scrollTop: 0 }, 400, "swing"); // Scroll to top if no target found
-        }
-      });
-    });
-  </script>
+  <!-- website auto scroll code -->
+  <script src="../src/autoscroll.js"></script>
 </body>
 </html>

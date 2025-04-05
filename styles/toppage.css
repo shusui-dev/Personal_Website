@@ -21,10 +21,7 @@ a:hover.white { color:#ffdc5e;font-style:normal;}
 a {text-decoration: none;transition: 0.8s;}
 a:hover img {opacity: 0.8;transition: opacity 0.2s ease-in-out;color: #ffdc5e;font-style:normal;}
 /* anchor tag and a couple of tag elements have css extras interations for example hover above an anchor tag can change its properties like we do manipulation in opacity transition*/
-a:hover i {
-  opacity: 0.5;
-  transition: opacity 0.2s ease-in-out;
-}
+a:hover i {opacity: 0.5;transition: opacity 0.2s ease-in-out;}
 /* center the BOX class in the contact session */
 .BOX{text-align: center; margin: 100px 0px 100px 0px;}
 /* mainbox position properties */
@@ -80,58 +77,54 @@ header {width: 100%;display: flex;align-items: center;overflow: hidden;}
 /* default nav properties for position */
 nav {margin: 0 auto;padding: 10px 0px 0px 0px;}
 /* headeerBox properties for contact session */
-.headeerBox {
+.headerBox3 {
   background-image: url(../img/wave2.png);
   background-repeat: repeat-x;
   height: 400px;
   padding: 50px 0px 0px 0px;
 }
 
-.headeerBox ul {
+.headerBox3 ul {
   list-style: none;
   margin: 0;
   display: flex;
   padding-left: 0px;
 }
 
-.headeerBox li {
+.headerBox3 li {
   margin: 0 0 0 25px;
   font-size: 20px;
   font-family: MyFont5;
 }
 
-.headeerBox {
+.headerBox3 {
   height: 400px;
   padding: 50px 0px 0px 0px;
 }
 /* headerBox properties from about session */
-.headerBox {
+.headerBox2 {
   background-image: url(../img/wave.png);
   background-repeat: repeat-x;
   height: 400px;
   padding: 50px 0px 0px 0px;
 }
 
-.headerBox ul {
+.headerBox2 ul {
   list-style: none;
   margin: 0;
   display: flex;
   padding-left: 0px;
 }
 
-.headerBox li {
+.headerBox2 li {
   margin: 0 0 0 25px;
   font-size: 20px;
   font-family: MyFont5;
 }
 
-.headerBox {
+.headerBox2 {
   height: 400px;
   padding: 50px 0px 0px 0px;
-}
-
-.sp-nav {
-  display: none;
 }
 
 @media screen and (max-width: 820px) {
@@ -142,17 +135,6 @@ nav {margin: 0 auto;padding: 10px 0px 0px 0px;}
   .toggle {
     transform: translateY( 0 );
     opacity: 1;
-  }
-
-  .main-visual {
-    padding: 0 4%;
-  }
-  /* main session of the pages display configuration */
-  .main-visual {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
   }
 
   pc_area{display:block;}
@@ -350,7 +332,8 @@ a:hover.footer { color:#808080;font-style:normal;}
   right: 20px;
   font-size: 40px;
   }
-  #page-top a {
+
+#page-top a {
   text-decoration: none;
   color: #ffffff;
   background-color: #00000000;
@@ -365,11 +348,12 @@ a:hover.footer { color:#808080;font-style:normal;}
   background-position: centert top;
   background-attachment: scroll;
   background-position: centert top;
-  }
-  #page-top a:hover {
+}
+
+#page-top a:hover {
   text-decoration: none;
   color: #ffffff;
   background-color: #FACC2E;
   background-attachment: scroll;
   background-position: centert top;
-  }
+}
