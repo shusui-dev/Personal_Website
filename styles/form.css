@@ -63,9 +63,9 @@
   width: 48px;
   display: inline-block;
   text-align: center;
-  background: #545454;
+  background: #008472;
   color: #fff;
-  font-size: 14px;
+  font-size: 16px;
 }
 
 @media screen and (max-width: 480px) {
@@ -136,10 +136,15 @@
   width: 280px;
   display: block;
   letter-spacing: 0.05em;
-  background: #545454;
+  background: #009f8a;
   color: #fff;
   font-weight: bold;
   font-size: 20px;
+}
+
+#submit_button:hover {
+  background: #007f6f;
+  cursor: pointer;
 }
 
 @media screen and (max-width: 480px) {
