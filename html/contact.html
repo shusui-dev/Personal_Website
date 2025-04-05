@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link REL="SHORTCUT ICON" HREF="../img/favicon/favicon.ico">
   <link rel="stylesheet" href="../styles/main.css">
-  <link rel="stylesheet" href="../styles/w2.css">
+  <link rel="stylesheet" href="../styles/form.css">
   <link rel="stylesheet" href="../styles/toppage.css">
   <script src="https://kit.fontawesome.com/ca7fa88fbb.js" crossorigin="anonymous"></script>
   <title>Document</title>
@@ -40,20 +40,23 @@
       </div>
       <hr class="line_style">
       <h2>Mail form</h2>
-      <form action="mail/postmail.cgi" method="post">
+      <form action="mail/postmail.cgi" method="POST">
       <div class="Form">
         <div class="Form-Item">
-          <p class="Form-Item-Label"><span class="Form-Item-Label-Required"><i class="fa-sharp fa-solid fa-fish-fins"></i></span>Name*  　</p>
-          <input name="_Name" type="text" class="Form-Item-Input" name="_Name">
+          <p class="Form-Item-Label"><span class="Form-Item-Label-Required">➢</span>Name*</p>
+          <input name="_Name" type="text" class="Form-Item-Input" placeholder="Anna A. N. dos Santos Moreira Cuccittini" name="_Name">
         </div>
+
         <div class="Form-Item">
-          <p class="Form-Item-Label"><span class="Form-Item-Label-Required"><i class="fa-sharp fa-solid fa-fish-fins"></i></span>E-mail*  　</p>
-          <input name="_Mail" type="email" class="Form-Item-Input" name="_E-mail">
+          <p class="Form-Item-Label"><span class="Form-Item-Label-Required">➢</span>Mail *</p>
+          <input name="_Mail" type="email" class="Form-Item-Input" placeholder="annaAveiro@email.com" name="_E-mail">
         </div>
+
         <div class="Form-Item">
-          <p class="Form-Item-Label isMsg"><span class="Form-Item-Label-Required"><i class="fa-sharp fa-solid fa-fish-fins"></i></span>Message*</p>
-          <textarea class="Form-Item-Textarea" name="_Message"></textarea>
+          <p class="Form-Item-Label isMsg"><span class="Form-Item-Label-Required">➢</span>Msg *</p>
+          <textarea class="Form-Item-Textarea" placeholder="I love your personal website I will give you a star on github! And a 100 on the homework project score!" name="_Message"></textarea>
         </div>
+
         <input id="submit_button" type="submit" class="Form-Btn" value="Send">
       </div>
       </form>
