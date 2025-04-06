@@ -1,0 +1,93 @@
+body,
+html {
+    margin: 0;
+    font-family: 'Nunito', sans-serif;
+    background-color: #101623;
+    color: #fff;
+}
+
+.heading3 {
+	position: relative;
+	padding-bottom: 30px;
+	font-size: 24px;
+	text-align: center;
+	font-size: 30px; 
+	color: #fff;
+}
+
+.heading3::after {
+	content: '';
+	position: absolute;
+	bottom: 0;
+	left: 50%;
+	transform: translateX(-50%);
+	width: 0;
+	height: 0;
+	border-style: solid;
+	border-width: 20px 16px 0 16px;
+	border-color: #da4176 rgba(0,0,0,0) rgba(0,0,0,0) rgba(0,0,0,0);
+}
+
+.headerBox4 {
+  background-image: url(../img/wave3.png);
+  background-repeat: repeat-x;
+  height: 400px;
+  padding: 50px 0px 0px 0px;
+}
+
+.headerBox4 ul {
+  list-style: none;
+  margin: 0;
+  display: flex;
+  padding-left: 0px;
+}
+
+.headerBox4 li {
+  margin: 0 0 0 25px;
+  font-size: 20px;
+}
+
+.headerBox4 {
+  height: 400px;
+  padding: 50px 0px 0px 0px;
+}
+
+#projects a{color: #da4176;text-decoration: none;transition: 0.3s;}
+
+#project-main-title {display: flex;justify-content: center;}
+
+#project-tile {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 20px;
+  margin: 5px;
+  margin-bottom: 15px;
+  border-radius: 10px;
+  z-index: 2;
+  gap: 10%;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+#project-tile h4{text-transform: uppercase;}
+
+#project-tile p{font-size: 20px;text-align: justify;}
+
+#game,
+#meilin,
+#landing-page {display: inline;width: 380px;height: 300px;border-radius: 10px;transition: all 0.5s;}
+
+#game:hover,
+#meilin:hover,
+#landing-page:hover {transform: scale(1.03);}
+
+.project-imgs {width: 400px;}
+
+#project-title {transition: all 0.3s;}
+
+#project-title:hover {
+  color: #dacb41;
+  cursor: pointer;
+  transform: scale(1.1);
+}
