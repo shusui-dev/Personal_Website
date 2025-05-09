@@ -9,7 +9,7 @@ body {
 
 /* Top image section */
 .top-img {
-  background: #ddd url(/img/bg.jpg) no-repeat center center;
+  background: #ddd url(../img/bg.jpg) no-repeat center center;
   background-size: cover;
   width: 100%; /* Use full width */
   height: 70vh; /* Use viewport height for better responsiveness */
