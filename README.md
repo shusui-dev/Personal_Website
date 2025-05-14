@@ -1,6 +1,6 @@
-# 🌐 Personal Website
+# 🌐 Personal Website (HifuuWeb)
 
-Welcome to my personal website! This project is a work in progress, showcasing my portfolio, skills, and interests. Built with passion and creativity, it reflects my journey as a developer.
+Welcome to my personal website! This project is a work in progress, showcasing my portfolio, skills, and interests. Built with passion and creativity, it reflects my learning journey as well as my boldness for trying something different but creative.
 
 ---
 
